@@ -1,4 +1,4 @@
-# COVID19-World-Tracker
+# COVID19-World-Trackergit commit -m "first commit"
 
 This is an app I made by following a tutorial from colbyfayock (https://github.com/colbyfayock/gatsby-starter-leaflet). I've altered it so as to create a better UX for users.
 
@@ -24,7 +24,7 @@ The following is pulled from colbyfayock's README, with the change of my repo in
 ## Quick Start
 Run the following in your favorite terminal:
 ```
-gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet
+gatsby new [directory] https://github.com/crc8109/COVID19-World-Tracker
 ```
 
 ## Starting from Scratch
@@ -35,11 +35,11 @@ yarn global add gatsby-cli
 ```
 * Inside the directory of your choice, scaffold a new Gatsby site:
 ```
-gatsby new [directory] ________________________________
+gatsby new [directory] https://github.com/crc8109/COVID19-World-Tracker
 ```
 For example, if I want my installation in `~/Code/new-gatsby-site`, I would navigate to `~/Code` and run:
 ```
-gatsby new new-gatsby-site ________________________
+gatsby new new-gatsby-site https://github.com/crc8109/COVID19-World-Tracker
 ```
 * Navigate to your new directory and run:
 ```
