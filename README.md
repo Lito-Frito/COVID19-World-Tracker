@@ -46,3 +46,13 @@ gatsby new new-gatsby-site https://github.com/crc8109/COVID19-World-Tracker
 yarn develop
 ```
 * The web app should now run locally
+
+## Troubleshooting
+
+Some people have had trouble when cloning this repo. If that's you, try the following commands within your terminal while in the directory of the cloned repo:
+
+```
+rm yarn.lock
+yarn
+gatsby develop
+```
