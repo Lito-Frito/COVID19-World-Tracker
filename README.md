@@ -1,4 +1,4 @@
-# COVID19-World-Trackergit commit -m "first commit"
+# COVID19-World-Tracker
 
 This is an app I made by following a tutorial from colbyfayock (https://github.com/colbyfayock/gatsby-starter-leaflet). I've altered it so as to create a better UX for users.
 
