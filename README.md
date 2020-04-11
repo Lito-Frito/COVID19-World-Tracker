@@ -2,7 +2,7 @@
 
 This is an app I made by following a tutorial from colbyfayock (https://github.com/colbyfayock/gatsby-starter-leaflet). I've altered it so as to create a better UX for users.
 
-The app creates a map that shows the spread of COVID19 around the world via visual and statistical information.
+The app creates a map that shows the spread of COVID19 around the world via visual & statistical information.
 
 The following is pulled from colbyfayock's README, with the change of my repo instead of his.
 
