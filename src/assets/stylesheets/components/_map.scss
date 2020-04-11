@@ -70,6 +70,14 @@ $map-background: #081217; // tilelayer background color
 
   }
 
+  &:active {
+
+    .icon-marker-tooltip {
+      display: block;
+    }
+
+  }
+
 }
 
 .icon-marker-tooltip {
