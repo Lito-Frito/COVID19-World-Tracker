@@ -1,5 +1,5 @@
 # COVID19-World-Tracker
-## Status [![Netlify Status](https://api.netlify.com/api/v1/badges/2650f6c5-6903-44bd-97ba-7c7dc943e5f7/deploy-status)](https://app.netlify.com/sites/covid19-international-tracker/deploys)
+## Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/2650f6c5-6903-44bd-97ba-7c7dc943e5f7/deploy-status)](https://app.netlify.com/sites/covid19-international-tracker/deploys)
 
 This is an app I made by following a tutorial from colbyfayock (https://github.com/colbyfayock/gatsby-starter-leaflet). I've altered it so as to create a better UX for users.
 
