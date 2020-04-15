@@ -93,14 +93,14 @@ const IndexPage = () => {
             <span class="icon-marker-tooltip">
               <h2>${country}</h2>
               <ul>
-                <li><strong>Confirmed:</strong> ${cases}</li>
-                <li><strong>Cases per Million</strong> ${casesPerOneMillion}</li>
-                <li><strong>Deaths:</strong> ${deaths}</li>
-                <li><strong>Deaths per Million</strong> ${deathsPerOneMillion}</li>
-                <li><strong>Recovered: </strong>${recovered}</li>
-                <li><strong>Active Cases:</strong> ${active}</li>
-                <li><strong>Critical Cases:</strong> ${critical}</li>
-                <li><strong>Last Update:</strong> ${updatedFormatted}</li>
+                <li><strong>Confirmed:</strong> ${cases.toLocaleString()}</li>
+                <li><strong>Cases per Million</strong> ${casesPerOneMillion.toLocaleString()}</li>
+                <li><strong>Deaths:</strong> ${deaths.toLocaleString()}</li>
+                <li><strong>Deaths per Million</strong> ${deathsPerOneMillion.toLocaleString()}</li>
+                <li><strong>Recovered: </strong>${recovered.toLocaleString()}</li>
+                <li><strong>Active Cases:</strong> ${active.toLocaleString()}</li>
+                <li><strong>Critical Cases:</strong> ${critical.toLocaleString()}</li>
+                <li><strong>Last Update:</strong> ${updatedFormatted.toLocaleString()}</li>
               </ul>
             </span>
             ${casesString}
