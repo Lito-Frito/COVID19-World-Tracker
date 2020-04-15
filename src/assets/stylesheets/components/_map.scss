@@ -58,45 +58,24 @@ $map-background: #081217; // tilelayer background color
   height: 3.6em;
   font-size: .7em;
   font-weight: bold;
-  background-color: #830707;
+  background-color: $red-800;
   border-radius: 100%;
-  box-shadow: 0 2px 5px rgba($grey-800, .9);
-
-  @media(hover: hover) and (pointer: fine) {
-    &:hover {
-      .icon-marker-tooltip {
-        display: block;
-      }
-    }
-  }
+  box-shadow: 0 2px 5px rgba(black, .9);
 
 }
 
-.icon-marker-tooltip {
-
-  display: none;
-  position: absolute;
-  bottom: 100%;
-  width: 16em;
-  font-size: 1.4em;
-  padding: 1em;
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  color: white;
   background-color: $blue-grey-900;
+}
+
+
+.icon-marker-tooltip {
+  display: block;
   border-radius: .4em;
   margin-bottom: 1em;
-  box-shadow: 0 3px 5px rgba(black, .9);
 
-  &:before {
-    display: block;
-    position: absolute;
-    bottom: -.6em;
-    left: 50%;
-    content: '';
-    width: 1.4em;
-    height: 1.4em;
-    background-color: $blue-grey-900;
-    transform: rotate(45deg);
-    margin-left: -.7em;
-  }
 
   h2 {
     font-size: 1.5em;

@@ -90,22 +90,29 @@ const IndexPage = () => {
 
         const html = `
           <span class="icon-marker">
-            <span class="icon-marker-tooltip">
-              <h2>${country}</h2>
-              <ul>
-                <li><strong>Confirmed:</strong> ${cases.toLocaleString()}</li>
-                <li><strong>Cases per Million</strong> ${casesPerOneMillion.toLocaleString()}</li>
-                <li><strong>Deaths:</strong> ${deaths.toLocaleString()}</li>
-                <li><strong>Deaths per Million</strong> ${deathsPerOneMillion.toLocaleString()}</li>
-                <li><strong>Recovered: </strong>${recovered.toLocaleString()}</li>
-                <li><strong>Active Cases:</strong> ${active.toLocaleString()}</li>
-                <li><strong>Critical Cases:</strong> ${critical.toLocaleString()}</li>
-                <li><strong>Last Update:</strong> ${updatedFormatted.toLocaleString()}</li>
-              </ul>
-            </span>
             ${casesString}
           </span>
         `;
+
+        const stats = `
+        <span class="icon-marker-tooltip">
+          <h2>${country}</h2>
+          <ul>
+            <li><strong>Confirmed:</strong> ${cases.toLocaleString()}</li>
+            <li><strong>Cases per Million</strong> ${casesPerOneMillion.toLocaleString()}</li>
+            <li><strong>Deaths:</strong> ${deaths.toLocaleString()}</li>
+            <li><strong>Deaths per Million</strong> ${deathsPerOneMillion.toLocaleString()}</li>
+            <li><strong>Recovered: </strong>${recovered.toLocaleString()}</li>
+            <li><strong>Active Cases:</strong> ${active.toLocaleString()}</li>
+            <li><strong>Critical Cases:</strong> ${critical.toLocaleString()}</li>
+            <li><strong>Last Update:</strong> ${updatedFormatted.toLocaleString()}</li>
+          </ul>
+          </span>
+          `;
+
+        const popup = L.popup({
+          maxWidth: 400,
+        }).setContent( stats );
 
         return L.marker( latlng, {
           icon: L.divIcon({
@@ -113,7 +120,7 @@ const IndexPage = () => {
             html,
           }),
           riseOnHover: true,
-        });
+        }).bindPopup( popup );
       },
     });
 
