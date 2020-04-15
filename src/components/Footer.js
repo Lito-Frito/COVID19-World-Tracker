@@ -7,9 +7,9 @@ const Footer = () => {
     <footer>
       <Container>
         <p>
-          See{ ' ' }
+          See the{ ' ' }
           <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
-            John Hopkin&apos;s
+            John Hopkin
           </a>{ ' ' }
           dashboard for more info
         </p>
