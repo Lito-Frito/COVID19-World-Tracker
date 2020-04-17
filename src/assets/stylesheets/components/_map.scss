@@ -47,6 +47,7 @@ $map-background: #081217; // tilelayer background color
 
 }
 
+//red bubble
 .icon-marker {
 
   display: flex;
@@ -66,13 +67,14 @@ $map-background: #081217; // tilelayer background color
 
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  color: white;
+  color: $blue-grey-900;
   background-color: $blue-grey-900;
 }
 
 
 .icon-marker-tooltip {
   display: block;
+  color: white;
   width: auto;
   border-radius: .4em;
   margin-bottom: 1em;
