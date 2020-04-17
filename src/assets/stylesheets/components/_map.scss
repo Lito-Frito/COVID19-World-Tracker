@@ -69,7 +69,7 @@ $map-background: #081217; // tilelayer background color
 
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-	background-color: $blue-grey-900;
+  	background-color: $blue-grey-900;
 	color: #333;
 	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
 	}
@@ -81,6 +81,10 @@ $map-background: #081217; // tilelayer background color
   border-radius: .4em;
   margin-bottom: 1em;
   background-color: $blue-grey-900;
+
+  &:before {
+    background-color: $blue-grey-900;
+  }
 
   img{
     max-width: 2em;
