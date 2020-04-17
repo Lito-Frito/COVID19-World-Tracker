@@ -5,18 +5,20 @@ $map-background: #081217; // tilelayer background color
 
   &,
   .map-base {
+
     width: 100%;
     height: 100%;
     background: $map-background;
-  }
 
-  .leaflet-control-attribution {
+    .leaflet-control-attribution {
 
-    color: $blue-grey-400;
-    background-color: black;
+      color: $blue-grey-400;
+      background-color: darken($map-background, 5);
 
-    a {
-      color: #009ddb;
+      a {
+        color: #009ddb;
+      }
+
     }
 
   }
@@ -65,11 +67,7 @@ $map-background: #081217; // tilelayer background color
 
 }
 
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
-  color: $blue-grey-900;
-  background-color: $blue-grey-900;
-}
+
 
 
 .icon-marker-tooltip {
