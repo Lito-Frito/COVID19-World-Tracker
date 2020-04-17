@@ -99,7 +99,7 @@ const IndexPage = () => {
 
         const stats = `
         <span class="icon-marker-tooltip">
-          <h2><img src="${flag}" alt="flags"> ${country}</h2>
+          <h2><img src="${flag}"> ${country}</h2>
           <ul>
             <li><strong>Confirmed:</strong> ${cases.toLocaleString()}</li>
             <li><strong>Cases per Million</strong> ${casesPerOneMillion.toLocaleString()}</li>
