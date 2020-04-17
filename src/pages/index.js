@@ -82,9 +82,9 @@ const IndexPage = () => {
         casesString = `${cases}`;
 
         if ( cases > 1000000 ) {
-          casesString = `${casesString.slice( 0, -3 )}M+`;
+          casesString = `${casesString.slice( 0, -6 )}M+`;
         } else if ( cases > 1000 ) {
-          casesString = `${casesString.slice( 0, -3 )}k+`;
+          casesString = `${casesString.slice( 0, -3 )}K+`;
         }
 
         if ( updated ) {
