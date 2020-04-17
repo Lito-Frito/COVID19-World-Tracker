@@ -67,10 +67,12 @@ $map-background: #081217; // tilelayer background color
 
 }
 
-.leaflet-popup-content-wrapper,
+.leaflet-popup-content-wrapper{
+  background-color: $blue-grey-900;
+}
 .leaflet-popup-tip {
-  color: orange;
-  background-color: white;
+  color: $blue-grey-900;
+  background-color: $blue-grey-900;
 }
 
 .icon-marker-tooltip {
@@ -79,7 +81,7 @@ $map-background: #081217; // tilelayer background color
   width: auto;
   border-radius: .4em;
   margin-bottom: 1em;
-  background-color: red;
+  background-color: $blue-grey-900;
 
   img{
     max-width: 2em;
