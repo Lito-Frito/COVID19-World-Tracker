@@ -75,8 +75,8 @@ const IndexPage = () => {
           recovered,
           active,
           critical,
-          // tests,
-          // testsPerOneMillion
+          tests,
+          testsPerOneMillion,
         } = properties;
 
         casesString = `${cases}`;
@@ -108,7 +108,8 @@ const IndexPage = () => {
             <li><strong>Recovered: </strong>${recovered.toLocaleString()}</li>
             <li><strong>Active Cases:</strong> ${active.toLocaleString()}</li>
             <li><strong>Critical Cases:</strong> ${critical.toLocaleString()}</li>
-
+            <li><strong>Tested:</strong> ${tests.toLocaleString()}</li>
+            <li><strong>Tested per Million:</strong> ${testsPerOneMillion.toLocaleString()}</li>
             <li><strong>Last Update:</strong> ${updatedFormatted.toLocaleString()}</li>
           </ul>
           </span>
