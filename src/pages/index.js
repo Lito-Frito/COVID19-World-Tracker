@@ -116,7 +116,7 @@ const IndexPage = () => {
           `;
 
         const popup = L.popup({
-          maxWidth: 400,
+          maxWidth: 700,
         }).setContent( stats );
 
         return L.marker( latlng, {
