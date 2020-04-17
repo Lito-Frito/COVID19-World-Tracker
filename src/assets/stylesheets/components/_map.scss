@@ -73,9 +73,14 @@ $map-background: #081217; // tilelayer background color
 
 .icon-marker-tooltip {
   display: block;
+  width: auto;
   border-radius: .4em;
   margin-bottom: 1em;
 
+  img{
+    max-width: 2em;
+    max-height: 3em;
+  }
 
   h2 {
     font-size: 1.5em;

@@ -43,11 +43,12 @@ const IndexPage = () => {
       type: 'FeatureCollection',
       features: data.map(( country = {}) => {
         const { countryInfo = {} } = country;
-        const { lat, long: lng } = countryInfo;
+        const { lat, long: lng, flag } = countryInfo;
         return {
           type: 'Feature',
           properties: {
             ...country,
+            flag,
           },
           geometry: {
             type: 'Point',
@@ -65,7 +66,7 @@ const IndexPage = () => {
 
         const {
           country,
-          // flag,
+          flag,
           updated,
           cases,
           casesPerOneMillion,
@@ -74,6 +75,8 @@ const IndexPage = () => {
           recovered,
           active,
           critical,
+          // tests,
+          // testsPerOneMillion
         } = properties;
 
         casesString = `${cases}`;
@@ -96,7 +99,7 @@ const IndexPage = () => {
 
         const stats = `
         <span class="icon-marker-tooltip">
-          <h2>${country}</h2>
+          <h2><img src="${flag}" alt="flags"> ${country}</h2>
           <ul>
             <li><strong>Confirmed:</strong> ${cases.toLocaleString()}</li>
             <li><strong>Cases per Million</strong> ${casesPerOneMillion.toLocaleString()}</li>
@@ -105,6 +108,7 @@ const IndexPage = () => {
             <li><strong>Recovered: </strong>${recovered.toLocaleString()}</li>
             <li><strong>Active Cases:</strong> ${active.toLocaleString()}</li>
             <li><strong>Critical Cases:</strong> ${critical.toLocaleString()}</li>
+
             <li><strong>Last Update:</strong> ${updatedFormatted.toLocaleString()}</li>
           </ul>
           </span>
