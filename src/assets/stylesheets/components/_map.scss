@@ -5,18 +5,20 @@ $map-background: #081217; // tilelayer background color
 
   &,
   .map-base {
+
     width: 100%;
     height: 100%;
     background: $map-background;
-  }
 
-  .leaflet-control-attribution {
+    .leaflet-control-attribution {
 
-    color: $blue-grey-400;
-    background-color: darken($map-background, 5);
+      color: $blue-grey-400;
+      background-color: darken($map-background, 5);
 
-    a {
-      color: #009ddb;
+      a {
+        color: #009ddb;
+      }
+
     }
 
   }
@@ -47,6 +49,7 @@ $map-background: #081217; // tilelayer background color
 
 }
 
+//red bubble
 .icon-marker {
 
   display: flex;
@@ -66,16 +69,27 @@ $map-background: #081217; // tilelayer background color
 
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  color: white;
-  background-color: $blue-grey-900;
-}
-
+  background-color: $blue-grey-900 !important;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
 
 .icon-marker-tooltip {
   display: block;
+  color: white;
+  width: auto;
   border-radius: .4em;
   margin-bottom: 1em;
+  background-color: $blue-grey-900;
 
+  &:before {
+    background-color: $blue-grey-900;
+  }
+
+  img{
+    max-width: 2em;
+    max-height: 3em;
+  }
 
   h2 {
     font-size: 1.5em;

@@ -26,7 +26,7 @@ const IndexPage = () => {
 
     //Try to pull the info, if no info then show an error message
     try {
-      response = await axios.get( 'https://corona.lmao.ninja/countries' );
+      response = await axios.get( 'https://corona.lmao.ninja/v2/countries' );
     } catch ( e ) {
       console.log( `Failed to fetch countries: ${e.message}`, e );
       return;
@@ -43,11 +43,12 @@ const IndexPage = () => {
       type: 'FeatureCollection',
       features: data.map(( country = {}) => {
         const { countryInfo = {} } = country;
-        const { lat, long: lng } = countryInfo;
+        const { lat, long: lng, flag } = countryInfo;
         return {
           type: 'Feature',
           properties: {
             ...country,
+            flag,
           },
           geometry: {
             type: 'Point',
@@ -65,7 +66,7 @@ const IndexPage = () => {
 
         const {
           country,
-          // flag,
+          flag,
           updated,
           cases,
           casesPerOneMillion,
@@ -74,14 +75,16 @@ const IndexPage = () => {
           recovered,
           active,
           critical,
+          tests,
+          testsPerOneMillion,
         } = properties;
 
         casesString = `${cases}`;
 
         if ( cases > 1000000 ) {
-          casesString = `${casesString.slice( 0, -3 )}M+`;
+          casesString = `${casesString.slice( 0, -6 )}M+`;
         } else if ( cases > 1000 ) {
-          casesString = `${casesString.slice( 0, -3 )}k+`;
+          casesString = `${casesString.slice( 0, -3 )}K+`;
         }
 
         if ( updated ) {
@@ -96,7 +99,7 @@ const IndexPage = () => {
 
         const stats = `
         <span class="icon-marker-tooltip">
-          <h2>${country}</h2>
+          <h2><img src="${flag}"> ${country}</h2>
           <ul>
             <li><strong>Confirmed:</strong> ${cases.toLocaleString()}</li>
             <li><strong>Cases per Million</strong> ${casesPerOneMillion.toLocaleString()}</li>
@@ -105,13 +108,15 @@ const IndexPage = () => {
             <li><strong>Recovered: </strong>${recovered.toLocaleString()}</li>
             <li><strong>Active Cases:</strong> ${active.toLocaleString()}</li>
             <li><strong>Critical Cases:</strong> ${critical.toLocaleString()}</li>
+            <li><strong>Tested:</strong> ${tests.toLocaleString()}</li>
+            <li><strong>Tested per Million:</strong> ${testsPerOneMillion.toLocaleString()}</li>
             <li><strong>Last Update:</strong> ${updatedFormatted.toLocaleString()}</li>
           </ul>
           </span>
           `;
 
         const popup = L.popup({
-          maxWidth: 400,
+          maxWidth: 700,
         }).setContent( stats );
 
         return L.marker( latlng, {
