@@ -1,9 +1,8 @@
 # COVID19-World-Tracker
 ## Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/62a2f791-f674-49bd-b88f-36094dd4bbf2/deploy-status)](https://app.netlify.com/sites/covid19-international-tracker/deploys)
 
-This is an app I made by following a tutorial from colbyfayock (https://github.com/colbyfayock/gatsby-starter-leaflet). I used his Leaflet map outline to bootstrap my app and altered it so as to create a better UX for users and provide more info. I also updated the API because the one in the aforementioned tutorial was deprecated.
+This is a map app I made to track the spread of COVID19 around the world. I used a repo from colbyfayock (https://github.com/colbyfayock/gatsby-starter-leaflet) to bootstrap the app by using Leaflet as a map outline. I changed the UI and the API used to a more recent iteration. I used the new API to include more relevant information for visitors.
 
-The app creates a map that shows the spread of COVID19 around the world via visual & statistical information.
 
 The following is pulled from colbyfayock's README, with the change of my repo instead of his.
 
@@ -50,10 +49,19 @@ yarn develop
 
 ## Troubleshooting
 
-Some people have had trouble when cloning this repo. If that's you, try the following commands within your terminal while in the directory of the cloned repo:
+Personal note: Some people have had trouble when cloning this repo. If that's you, try the following commands within your terminal while in the directory of the cloned repo:
 
 ```
 rm yarn.lock
 yarn
 gatsby develop
 ```
+
+
+Also, make sure you get your own key to mapbox and create a .env file to store it. You can copy my design (mapbox://styles/crc8109/ck8vqm1nn12n01io6o4y9xlq2) and create your own key. Then on the CLI, type:
+
+```
+source .env
+```
+
+This will make sure that the map loads with the design from Mapbox. 
