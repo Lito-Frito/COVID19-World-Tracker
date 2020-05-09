@@ -1,7 +1,7 @@
 # COVID19-World-Tracker
 ## Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/62a2f791-f674-49bd-b88f-36094dd4bbf2/deploy-status)](https://app.netlify.com/sites/covid19-international-tracker/deploys)
 
-This is a map app I made to track the spread of COVID19 around the world. I used a repo from colbyfayock (https://github.com/colbyfayock/gatsby-starter-leaflet) to bootstrap the app by using Leaflet as a map outline. I changed the UI and the API used to a more recent iteration. I used the new API to include more relevant information for visitors.
+This is a map app I made to track the spread of COVID19 around the world. I used a repo from  [Colby Fayock](https://github.com/colbyfayock/gatsby-starter-leaflet) to bootstrap the app by using Leaflet as a map outline. I changed the UI and the API used to a more recent iteration. I used the new API to include more relevant information for visitors.
 
 
 The following is pulled from colbyfayock's README, with the change of my repo instead of his.
