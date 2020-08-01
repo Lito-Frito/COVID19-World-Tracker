@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <Container type="content">
-        <p>US COVID19 Tracker</p>
+        <p>Global COVID19 Tracker</p>
         <ul>
           <li>
             <a href="https://covid19-us-tracker.netlify.app/">US Tracker</a>
