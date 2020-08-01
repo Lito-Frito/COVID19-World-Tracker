@@ -7,21 +7,15 @@ const Header = () => {
   return (
     <header>
       <Container type="content">
-        <p>Global COVID19 Tracker</p>
-
+        <p>US COVID19 Tracker</p>
+        <ul>
+          <li>
+            <a href="https://covid19-us-tracker.netlify.app/">US Tracker</a>
+          </li>
+        </ul>
       </Container>
     </header>
   );
 };
 
 export default Header;
-//Need to make this the link to the US_Map
-// <ul>
-//   <li>
-//     <Link to="/">Home</Link>
-//   </li>
-
-// <li>
-//   <Link to="/page-2/">Page 2</Link>
-// </li>
-// </ul>
