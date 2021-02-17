@@ -4,8 +4,6 @@
 This is a map app I made to track the spread of COVID19 around the world. I used a repo from  [Colby Fayock](https://github.com/colbyfayock/gatsby-starter-leaflet) to bootstrap the app by using Leaflet as a map outline. I changed the UI and the API used to a more recent iteration. I used the new API to include more relevant information for visitors.
 
 
-The following is pulled from colbyfayock's README, with the change of my repo instead of his.
-
 ## What This Includes
 * [Yarn](https://yarnpkg.com/en/)
 * [Gatsby](https://www.gatsbyjs.org/)
